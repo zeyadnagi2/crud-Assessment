@@ -1,0 +1,55 @@
+body {
+  background-color: #161a28;
+  font-family: "Poetsen One", sans-serif;
+}
+.crud-form {
+  box-shadow: 0em 0em 1em 0.2em lavender;
+}
+input,
+textarea {
+  border: none !important;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  border-bottom: teal 5px solid !important;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+body {
+  background-color: #f7ebdd;
+}
+
+header {
+  margin-top: 5rem;
+}
+
+.head-caption {
+  font-family: "Pacifico", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3.5rem;
+}
+
+.head-caption::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30%; 
+  background-color: #fec260;
+  z-index: -1; 
+  transition: height 0.4s ease-in-out;
+}
+
+.head-caption:hover::before {
+  height: 70%; 
+}
