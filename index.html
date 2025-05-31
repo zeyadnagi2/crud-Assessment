@@ -3,38 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CRUD</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
-      rel="stylesheet"
-    />
+    <title>Bookmark</title>
+
+    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="images/favicon_io/favicon.ico"
       type="image/x-icon"
     />
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Poetsen+One&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
 
   <body>
-    <div class="container">
-      <header class="position-relative d-flex justify-content-center align-content-center">
-        <h1 class="head-caption position-relative overflow-hidden z-1 d-block">Bookmarker</h1>
+    <div class="container text-center">
+      <header
+        class="position-relative d-flex justify-content-center align-content-center"
+      >
+        <h1 class="head-caption position-relative overflow-hidden z-1 d-block">
+          Bookmarker
+        </h1>
       </header>
 
-      
+      <hr class="dashed-line" />
+
+      <h1 class="gradient-text">
+        <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h1>
+
+      <div class="input-one mt-5 text-start">
+        <label for="web-name" class="web-name-lbl"
+          ><i class="fa-solid fa-book"></i> Site Name</label
+        >
+        <input
+          type="text"
+          id="web-name"
+          class="web-name"
+          placeholder="Bookmark Name"
+        />
+      </div>
+
+      <div class="input-two mt-3 text-start">
+        <label for="web-url" class="web-url-lbl"
+          ><i class="fa-solid fa-link"></i> Site URL</label
+        >
+        <input
+          type="text"
+          id="web-url"
+          class="web-url"
+          placeholder="Website URl"
+        />
+      </div>
+
+      <button type="button" class="btn btn-primary mt-4 custom-orange-btn">
+        Submit
+      </button>
+
+      <hr class="dashed-line" />
+
+      <table class="table text-center align-middle custom-table">
+        <thead class="table-light">
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td class="fw-semibold">Google</td>
+            <td>
+              <button class="btn btn-visit">
+                <i class="fa-solid fa-eye"></i> Visit
+              </button>
+            </td>
+            <td>
+              <button class="btn btn-delete">
+                <i class="fa-solid fa-trash-can"></i> Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="fw-semibold">Facebook</td>
+            <td>
+              <button class="btn btn-visit">
+                <i class="fa-solid fa-eye"></i> Visit
+              </button>
+            </td>
+            <td>
+              <button class="btn btn-delete">
+                <i class="fa-solid fa-trash-can"></i> Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>

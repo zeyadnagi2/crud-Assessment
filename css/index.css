@@ -1,26 +1,6 @@
-body {
-  background-color: #161a28;
-  font-family: "Poetsen One", sans-serif;
-}
-.crud-form {
-  box-shadow: 0em 0em 1em 0.2em lavender;
-}
 input,
 textarea {
   border: none !important;
-}
-
-input:focus,
-textarea:focus {
-  box-shadow: none !important;
-  border: none !important;
-  outline: none !important;
-  border-bottom: teal 5px solid !important;
-  border-radius: 2rem;
-  -webkit-border-radius: 2rem;
-  -moz-border-radius: 2rem;
-  -ms-border-radius: 2rem;
-  -o-border-radius: 2rem;
 }
 
 body {
@@ -28,7 +8,7 @@ body {
 }
 
 header {
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .head-caption {
@@ -44,12 +24,115 @@ header {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 30%; 
+  height: 30%;
   background-color: #fec260;
-  z-index: -1; 
+  z-index: -1;
   transition: height 0.4s ease-in-out;
 }
 
 .head-caption:hover::before {
-  height: 70%; 
+  height: 70%;
+}
+
+.dashed-line {
+  border: none;
+  border-top: #000 dashed 2px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.gradient-text {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #22813d, #c7be37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-one,
+.input-two {
+  display: flex;
+  flex-direction: column;
+}
+
+input.web-name,
+input.web-url {
+  margin-top: 6px;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  font-family: "PT Sans Caption", sans-serif;
+  border: 2px solid #e1650b; /* Bootstrap's default border */
+  border-radius: 0.25rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+input.web-name:focus,
+input.web-url:focus {
+  border-color: gold;
+  box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25); /* soft gold glow */
+}
+
+.web-name-lbl,
+.web-url-lbl {
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.custom-orange-btn {
+  background-color: rgb(229, 93, 3);
+  border-color: rgb(229, 93, 3);
+  color: white;
+  font-size: 1.2rem;
+  width: 10rem;
+}
+
+.custom-orange-btn:hover {
+  background-color: rgb(214, 75, 0);
+  border-color: rgb(214, 75, 0);
+}
+
+.custom-table {
+  border: 1px solid #dee2e6;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn-visit {
+  background-color: #a6b33e;
+  color: white;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-visit:hover {
+  background-color: #8e9d33;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #e50914;
+  color: white;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: #c40810;
+  color: white;
 }
