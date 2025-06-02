@@ -11,6 +11,12 @@ header {
   margin-top: 4rem;
 }
 
+a {
+  text-decoration: none;
+  color: white; 
+}
+
+
 .head-caption {
   font-family: "Pacifico", cursive;
   font-weight: 500;

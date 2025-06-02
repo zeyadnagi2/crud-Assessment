@@ -44,30 +44,34 @@
       </h1>
 
       <div class="input-one mt-5 text-start">
-        <label for="web-name" class="web-name-lbl"
+        <label for="webName" class="web-name-lbl"
           ><i class="fa-solid fa-book"></i> Site Name</label
         >
         <input
           type="text"
-          id="web-name"
+          id="webName"
           class="web-name"
           placeholder="Bookmark Name"
         />
       </div>
 
       <div class="input-two mt-3 text-start">
-        <label for="web-url" class="web-url-lbl"
+        <label for="webUrl" class="web-url-lbl"
           ><i class="fa-solid fa-link"></i> Site URL</label
         >
         <input
           type="text"
-          id="web-url"
+          id="webUrl"
           class="web-url"
           placeholder="Website URl"
         />
       </div>
 
-      <button type="button" class="btn btn-primary mt-4 custom-orange-btn">
+      <button
+        onclick="addWebsite()"
+        type="button"
+        class="btn btn-primary mt-4 custom-orange-btn"
+      >
         Submit
       </button>
 
@@ -82,36 +86,7 @@
             <th>Delete</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td class="fw-semibold">Google</td>
-            <td>
-              <button class="btn btn-visit">
-                <i class="fa-solid fa-eye"></i> Visit
-              </button>
-            </td>
-            <td>
-              <button class="btn btn-delete">
-                <i class="fa-solid fa-trash-can"></i> Delete
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td class="fw-semibold">Facebook</td>
-            <td>
-              <button class="btn btn-visit">
-                <i class="fa-solid fa-eye"></i> Visit
-              </button>
-            </td>
-            <td>
-              <button class="btn btn-delete">
-                <i class="fa-solid fa-trash-can"></i> Delete
-              </button>
-            </td>
-          </tr>
-        </tbody>
+        <tbody id="tBody"></tbody>
       </table>
     </div>
 
