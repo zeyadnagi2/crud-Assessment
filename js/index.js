@@ -12,22 +12,42 @@ if (localStorage.getItem("websites")) {
 
 // add function
 function addWebsite() {
+  var name = webName.value.trim();
+  var url = webUrl.value.trim();
+
+  var isNameValid = /^[a-zA-Z ]+$/.test(name);
+  var isUrlValid = /^www\.[a-zA-Z0-9\-]+\.com$/.test(url);
+
+  updateInputClass(webName, isNameValid);
+  updateInputClass(webUrl, isUrlValid);
+
+  if (!isNameValid || !isUrlValid) return;
+
   var website = {
-    siteName: webName.value,
-    siteUrl: webUrl.value,
+    siteName: name,
+    siteUrl: url,
   };
 
   websites.push(website);
-  console.log(websites);
-  clearInputs();
   localStorage.setItem("websites", JSON.stringify(websites));
+  clearInputs();
   displayWebsites();
+
+}
+
+// update inputs colors
+function updateInputClass(inputElement, isValid) {
+  inputElement.classList.remove("is-valid", "is-invalid");
+  inputElement.classList.add(isValid ? "is-valid" : "is-invalid");
 }
 
 // clear inputs function
 function clearInputs() {
-  webName.value = null;
-  webUrl.value = null;
+  webName.value = "";
+  webUrl.value = "";
+
+  webName.classList.remove("is-valid", "is-invalid");
+  webUrl.classList.remove("is-valid", "is-invalid");
 }
 
 // display function
@@ -60,6 +80,3 @@ function deleteWebsite(indexElement) {
   localStorage.setItem("websites", JSON.stringify(websites));
   displayWebsites();
 }
-
-
-

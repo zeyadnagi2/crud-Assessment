@@ -142,3 +142,12 @@ input.web-url:focus {
   background-color: #c40810;
   color: white;
 }
+
+
+input.is-valid {
+  border: 2px solid green !important;
+}
+
+input.is-invalid {
+  border: 2px solid red !important;
+}
