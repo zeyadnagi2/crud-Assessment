@@ -15,7 +15,7 @@ function addWebsite() {
   var name = webName.value.trim();
   var url = webUrl.value.trim();
 
-  var isNameValid = /^[a-zA-Z ]+$/.test(name);
+  var isNameValid = /^[a-zA-Z]+$/.test(name);
   var isUrlValid = /^www\.[a-zA-Z0-9\-]+\.com$/.test(url);
 
   updateInputClass(webName, isNameValid);
